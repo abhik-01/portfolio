@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 from pymongo import MongoClient
-from gevent.pywsgi import WSGIServer
 import HN_Scrapping
 from HN_Scrapping import hn
 
@@ -49,8 +48,3 @@ def get_input():
     HN_Scrapping.import_links(inp)
     result = HN_Scrapping.sorted_hn(hn_list=hn)
     return render_template('scrape.html', result=result)
-
-
-if __name__ == '__main__':
-    http_server = WSGIServer(('0.0.0.0', 5000), app)
-    http_server.serve_forever()
