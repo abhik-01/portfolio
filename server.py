@@ -5,7 +5,7 @@ from HN_Scrapping import hn
 
 app = Flask(__name__)
 
-cluster = MongoClient('mongodb+srv://admin:admin@cluster0.xzjm3.mongodb.net/portfolio?retryWrites=true&w=majority')
+cluster = # mongodb connection string
 db = cluster.get_database('portfolio')
 collection = db.messages
 
