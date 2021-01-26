@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from pymongo import MongoClient
-import HN_Scrapping
-from HN_Scrapping import hn
+import HN_Scraping
+from HN_Scraping import hn
 
 app = Flask(__name__)
 
@@ -45,6 +45,6 @@ def submit_form():
 @app.route('/webscraper.html', methods=['POST'])
 def get_input():
     inp = request.form['input']
-    HN_Scrapping.import_links(inp)
-    result = HN_Scrapping.sorted_hn(hn_list=hn)
+    HN_Scraping.import_links(inp)
+    result = HN_Scraping.sorted_hn(hn_list=hn)
     return render_template('scrape.html', result=result)
