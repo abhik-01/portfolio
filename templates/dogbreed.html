@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="UTF-8">
@@ -10,16 +11,15 @@
 
 
   <meta name="msapplication-tap-highlight" content="no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
-  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+<!--  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">-->
   <link href="./static/assets/favicon.ico" rel="icon">
 
-  <title>Web Scraper</title>
+  <title>Dog Breed</title>
 
-<link href="./static/main.3f6952e4.css" rel="stylesheet">
-
-
-</head>
+<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
 
 
 <body class="">
@@ -48,8 +48,8 @@
 
 
           <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="./dogbreed.html">01</a></li>
-            <li><a href="./webscraper.html" class="active">02</a></li>
+            <li><a href="./dogbreed.html" class="active">01</a></li>
+            <li><a href="./webscraper.html">02</a></li>
             <li><a href="https://github.com/abhik-01/Cars-and-Pedestrians-tracker-using-machine-learning">03</a></li>
             <li><a href="https://github.com/abhik-01/Data-Visualizer">04</a></li>
           </ul>
@@ -63,26 +63,50 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <img src="./static/assets/images/work001-01.jpg" class="img-responsive" alt="">
+        <img src="./static/assets/images/dog-2.jpg" class="img-responsive" alt="">
         <div class="card-container">
           <div class="text-center">
-            <h1 class="h2">Hey there &#128522</h1>
-            <h1 class="h2">Welcome to the Hacker News web scraper</h1>
+            <h1 class="h2">Hii &#128519</h1>
+            <blockquote>
+              <h1 class="h2">I can find your dog's breed &#128526</h1>
+            </blockquote>
           </div>
-          <blockquote>
-            <h1 class="h3"> How many pages do you want to scrape&#10068</h1>
-          </blockquote>
-
-
-
-
 
           <div class="row">
-               <form name="form" id="frm" action="/webscraper.html" method="POST" class="reveal-content">
+               <form name="form" id="frm" action="make_prediction" method="POST" enctype="multipart/form-data" class="reveal-content">
                   <div class="row">
                     <div class="form-group"></div>
-                      <input type="number" max="15" name="input" id="txt" class="form-control" placeholder="Page Number" required>
-                        <blockquote><button type="submit" value="Submit" class="btn btn-default btn-lg">Send</button></blockquote>
+                    <blockquote><h2>Upload the image of your dog here &#128054</h2></blockquote>
+                      <input type="file" style="width: 202px" name="image" id="img" class="form-control" accept="image/jpeg" placeholder="Upload"
+                             onchange="return encodeImageFileURL()" required>
+                    <div class="form-group"></div>
+                      <img src="" name="inputImg" id="image" width="500px">
+                    <script type="text/javascript">
+                      $(document).ready(function() {
+                        $('#btn').hide();
+                      });
+                      function encodeImageFileURL() {
+                        var fileSelect = document.getElementById("img").files;
+                        if (fileSelect.length > 0){
+                          var fileToLoad = fileSelect[0];
+                          var fileReader = new FileReader();
+
+                          fileReader.onload = function(FileLoadEvent){
+                            var srcData = FileLoadEvent.target.result;
+                            document.getElementById("image").src = srcData
+                            fileSelect.src = srcData;
+                          }
+                          fileReader.readAsDataURL(fileToLoad);
+
+                          $(document).ready(function() {
+                            $('#btn').show();
+                          });
+                        }
+                      }
+                    </script>
+                        <h3>{{breed}}</h3>
+                        <h3>{{prediction_score}}</h3>
+                    <blockquote><button type="submit" id="btn" value="Submit" class="btn btn-default btn-lg">Predict</button></blockquote>
                   </div>
                </form>
           </div>
