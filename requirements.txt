@@ -2,13 +2,13 @@ absl-py==0.10.0
 astunparse==1.6.3
 attrs==20.3.0
 beautifulsoup4==4.9.3
-cachetools==4.2.1
+cachetools==3.1.1
 certifi==2020.11.8
 cffi==1.14.4
 chardet==3.0.4
 click==7.1.2
 dill==0.3.3
-dnspython==2.0.0
+dnspython==1.16.0
 email-validator==1.1.2
 Flask==1.1.2
 flask-mongoengine==1.0.0

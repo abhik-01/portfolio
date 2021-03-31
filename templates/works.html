@@ -19,8 +19,8 @@
 <link href="./static/main.3f6952e4.css" rel="stylesheet">
 
 <style>
-  .carousel-inner {
-      height:464px;
+  #myCarousel {
+    height:464px;
   }
 </style>
 
@@ -49,8 +49,6 @@
           <li><a href="./about.html" title="">03 : About me</a></li>
           <li><a href="./contact.html" title="">04 : Contact</a></li>
         </ul>
-
-
       </div> 
     </div>
   </nav>
@@ -68,14 +66,14 @@
 
       <div class="col-md-12">
      
-        <div id="myCarousel" class="carousel slide projects-carousel" data-interval="5000" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide projects-carousel" data-interval="false" data-ride="carousel">
           <div class="carousel-inner">
-              <div class="item active">
+              <div class="item active" id="s1">
                   <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-12 col-sm-4">
 
                         <a href="./dogbreed.html" class="black-image-project-hover">
-                          <img src="./static/assets/images/dogs-hover.jpg" class="img-responsive">
+                          <img src="./static/assets/images/dogs-hover.jpg" class="img-responsive" alt="Responsive image">
                         </a>
                         <div class="card-container card-container-lg">
                           <h4>01</h4>
@@ -85,10 +83,10 @@
                         </div>
                     </div>
 
-                      <div class="col-sm-4">
+                      <div class="col-12 col-sm-4">
 
                         <a href="./webscraper.html" class="black-image-project-hover">
-                          <img src="./static/assets/images/work01-hover.jpg" class="img-responsive">
+                          <img src="./static/assets/images/work01-hover.jpg" class="img-responsive" alt="Responsive image">
                         </a>
                         <div class="card-container card-container-lg">
                           <h4>02</h4>
@@ -97,9 +95,9 @@
                           <a href="./webscraper.html" class="btn btn-default">Discover</a>
                         </div>
                       </div>
-                      <div class="col-sm-4">
+                      <div class="col-12 col-sm-4">
                         <a href="https://github.com/abhik-01/Cars-and-Pedestrians-tracker-using-machine-learning" title="" class="black-image-project-hover">
-                          <img src="./static/assets/images/work02-hover.jpg" class="img-responsive">
+                          <img src="./static/assets/images/work02-hover.jpg" class="img-responsive" alt="Responsive image">
                         </a>
                         <div class="card-container card-container-lg">
                           <h4>03</h4>
@@ -112,23 +110,23 @@
 
                   </div>
               </div>
-            <div class="item">
-                      <div class="row">
-                        <div class="col-sm-4">
-                        <a href="https://github.com/abhik-01/Data-Visualizer" title="" class="black-image-project-hover">
-                          <img src="./static/assets/images/work03-hover.jpg" class="img-responsive">
-                        </a>
-                        <div class="card-container card-container-lg">
-                          <h4>04</h4>
-                          <h3>Data Visualizer</h3>
-                          <p>It can show the market value of every individual player of fifa 2019</p>
-                          <a href="https://github.com/abhik-01/Data-Visualizer" class="btn btn-default">Discover</a>
-                        </div>
-                      </div>
+              <div class="item">
+                  <div class="row">
+                    <div class="col-12 col-sm-4">
+                      <a href="https://github.com/abhik-01/Data-Visualizer" title="" class="black-image-project-hover">
+                        <img src="./static/assets/images/work03-hover.jpg" class="img-responsive" alt="Responsive image">
+                      </a>
+                      <div class="card-container card-container-lg">
+                        <h4>04</h4>
+                        <h3>Data Visualizer</h3>
+                        <p>It can show the market value of every individual player of fifa 2019</p>
+                        <a href="https://github.com/abhik-01/Data-Visualizer" class="btn btn-default">Discover</a>
                       </div>
                     </div>
+                  </div>
+              </div>
 
-            </div>
+              </div>
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
 

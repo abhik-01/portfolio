@@ -43,6 +43,7 @@ breeds = ['affenpinscher', 'afghan_hound', 'african_hunting_dog', 'airedale',
           'wire-haired_fox_terrier', 'yorkshire_terrier']
 
 
+# get the image & process that
 def get_image(image):
     tensor = tf.io.decode_jpeg(image, channels=3)
     color_channel = tf.image.convert_image_dtype(tensor, tf.float32)
@@ -51,29 +52,35 @@ def get_image(image):
     return resize
 
 
+# create batch data from the input
 def create_batch(data):
     dataset = tf.data.Dataset.from_tensors(tf.constant(data))
     data_batch = dataset.map(get_image).batch(1)
-    convert_to_numpy = tfds.as_numpy(data_batch)
 
+    # convert batch data to numpy array
+    convert_to_numpy = tfds.as_numpy(data_batch)
     for i in convert_to_numpy:
         return tf.constant(i)
 
 
+# send input data to the model and get model predictions
 def make_predictions(batch_data):
     headers = {"content-type": "application/json"}
-    url = 'https://boiling-sea-15225.herokuapp.com'
+    url = 'https://agile-escarpment-25393.herokuapp.com'
     full_url = f"{url}/v1/models/full-data-resnet50v2/versions/1:predict"
 
+    # turn input data to json object
     data = json.dumps({"signature_name": "serving_default",
                        "instances": create_batch(batch_data).numpy().tolist()})
 
+    # get response form the model
     response = requests.post(full_url, data=data, headers=headers)
     predictions = json.loads(response.text)['predictions']
 
     return get_breed(predictions[0])
 
 
+# convert model predictions into label & get the prediction score
 def get_breed(prediction):
     max_index = breeds[np.argmax(prediction)]
     score = np.max(prediction)

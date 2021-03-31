@@ -7,8 +7,8 @@ def import_links(page_num):
     total_links = []
     total_sub = []
     for i in range(1, int(page_num) + 1):
-        # scraping the website to get the data
 
+        # scrape the website to get the data
         res = requests.get(f'https://news.ycombinator.com/news?p={i}')
         soup = BeautifulSoup(res.text, 'html.parser')
         links = soup.select('.storylink')

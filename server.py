@@ -1,14 +1,16 @@
-from flask import Flask, render_template, request, redirect, jsonify
+from flask import Flask, render_template, request
 from pymongo import MongoClient
 
 import HN_Scraping
 import dogvision
 from HN_Scraping import hn
+import os
+
 
 app = Flask(__name__)
 
-cluster = MongoClient(
-    'mongodb+srv://admin:admin@cluster0.xzjm3.mongodb.net/portfolio?retryWrites=true&w=majority')  # mongodb connection string
+connection_string = os.environ.get('MDB')  # environment variable for the database's connection string
+cluster = MongoClient(connection_string)
 db = cluster.get_database('portfolio')
 collection = db.messages
 

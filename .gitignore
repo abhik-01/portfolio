@@ -1,6 +1,6 @@
 .*
-Procfile.File
+Procfile
 requirements.txt
 !.gitignore
 __pycache__/
-venv/
+venv/*

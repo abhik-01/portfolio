@@ -27,15 +27,14 @@
     text-align: left;
     font-size: 1.5em;
     height: 50px;
-    padding: 5px 5px;
   }
   .content-table table{
     width: 100%;
+    table-layout: fixed;
   }
   .content-table td {
     height: 100px;
     font-size: 1.2em;
-    padding: 5px 5px;
   }
   .content-table tbody tr:nth-of-type(even) {
     background-color: #C8C8C8;
@@ -80,54 +79,44 @@
           <div class="section-container-spacer text-center">
             <h1 class="h2">HN Scraper&#129311</h1>
           </div>
-          
           <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-
               <script>
-
-                function replace_content(content)
-                {
-                   var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-                   var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
-                   var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
-                   var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
-                   return new_content;
+                function replace_content(content) {
+                  var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                  var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                  var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                  var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                  return new_content;
                 }
-                window.onload = function(){
+
+                window.onload = function() {
                   var elm = document.getElementById("data");
                   var modifiedHtml = replace_content(elm.innerHTML);
                   elm.innerHTML = modifiedHtml;
                 }
-
-
               </script>
-              <div id="data">
-                <table class="content-table">
+              <div class="row" id="data">
+                <table class="row content-table" style="table-layout:fixed">
                   <tr>
-                    <th>Title</th>
-                    <th>Link</th>
-                    <th>Score</th>
+                    <th style="font-size:15pt;text-align:left;width:10%">Title</th>
+                    <th style="font-size:15pt;text-align:center">Link</th>
+                    <th style="font-size:15pt;text-align:right">Score</th>
                   </tr>
 
                 {% for item in result %}
                 <tr>
-                  <td>{{item['Title']}}</td>
-                  <td>{{item['Link']}}</td>
-                  <td>{{item['Score']}}</td>
+                  <td style="font-size:11pt;text-align:left">{{item['Title']}}</td>
+                  <td style="font-size:11pt;text-align:center">{{item['Link']}}</td>
+                  <td style="font-size:11pt;text-align:right">{{item['Score']}}</td>
                 </tr>
                 {% endfor %}
                 </table>
               </div>
-
-            </div>
           </div>
-
-       </div>
+        </div>
       </div>
     </div>
-  </div>
-
+</div>
 
 
 <script>
