@@ -1,6 +1,6 @@
 <h1 align='center'>Portfolio</h1>
 
-This is my portfolio website build using `Python` & `Flask` web framework.
+This is my portfolio website built using `Python` & `Flask` web framework.
 The design is made using `HTML5`, `BOOTSTRAP 3`, `Javascript` & some `jquery`.
 I've used `MongoDB` for the database & `Gunicorn` to serve the application.
 Lastly, I've containerized the application using `Docker` & deployed it on `Heroku`.
@@ -20,7 +20,7 @@ Loading speed at different locations:
 
 * ### Diego
 
-  It's a `Deep Learning Neural Network` model build using `Python` & `Tensorflow`, capable of identifying a dog's breed.
+  It's a `Deep Learning Neural Network` model built using `Python` & `Tensorflow`, capable of identifying a dog's breed.
   The frontend of the model takes a dog's image as an input & follows the `REST Architecture`
   to send the input data to the model. The model then predicts the breed & returns the output result.
   As of now it can identify 120 dog breeds.
@@ -61,7 +61,7 @@ Loading speed at different locations:
 
 * ### Data Visualizer
 
-  It's a `Data Visualizer` build using various `Python` libraries. It can process any large
+  It's a `Data Visualizer` built using various `Python` libraries. It can process any large
   dataset, clean that as required & then visualize every individual data point present in the dataset.
   
   ![Demo3](https://drive.google.com/uc?export=view&id=1DLrWuBsVMyU5Njm-Gt5gJfR4_32M7AF1)
