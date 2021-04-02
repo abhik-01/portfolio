@@ -8,13 +8,13 @@ Lastly, I've containerized the application using `Docker` & deployed it on `Hero
 According to the stats of https://www.uptimia.com, this website takes an average time of 2.6 sec to load.
 The other stats are as below:
 
-![](https://drive.google.com/uc?export=view&id=1X2HKfyeponyB8Ue81HphTmU10Mr2K1T_)
+![Stats](https://drive.google.com/uc?export=view&id=1X2HKfyeponyB8Ue81HphTmU10Mr2K1T_)
 
 Loading speed at different locations:
 
-![](https://drive.google.com/uc?export=view&id=1F08E8SBl2O8WHkcPoWts2C3kTGaD8X4x)
+![By Location](https://drive.google.com/uc?export=view&id=1F08E8SBl2O8WHkcPoWts2C3kTGaD8X4x)
 
-![](https://drive.google.com/uc?export=view&id=1bAaE1_VaakHc3NKAMht8GgCNAgy8EeOv)
+![By Contitent](https://drive.google.com/uc?export=view&id=1bAaE1_VaakHc3NKAMht8GgCNAgy8EeOv)
 
 ## All the other projects included in this website are
 
@@ -25,7 +25,7 @@ Loading speed at different locations:
   to send the input data to the model. The model then predicts the breed & returns the output result.
   As of now it can identify 120 dog breeds.
   
-  ![](https://drive.google.com/uc?export=view&id=1scOOYB2EET20qnXzouhAC8rE8Y65t48k)
+  ![Demo1](https://drive.google.com/uc?export=view&id=1scOOYB2EET20qnXzouhAC8rE8Y65t48k)
   
   With the help of various `Machine Learning` techniques the model performs pretty fast
   & it has very good accuracy as well.
@@ -53,7 +53,7 @@ Loading speed at different locations:
   This is an `OpenCV` project, able to detect cars & pedestrians. It takes a video file and
   finds out random cars and pedestrians on a road.
   
-  ![](https://drive.google.com/uc?export=view&id=1-CVJExONC9YaL6MnuLdoZkh_bRjXQ9sq)
+  ![Demo2](https://drive.google.com/uc?export=view&id=1-CVJExONC9YaL6MnuLdoZkh_bRjXQ9sq)
   
   You can check out the code snippet here to know more about it
   
@@ -64,7 +64,7 @@ Loading speed at different locations:
   It's a `Data Visualizer` build using various `Python` libraries. It can process any large
   dataset, clean that as required & then visualize every individual data point present in the dataset.
   
-  ![](https://drive.google.com/uc?export=view&id=1GLDxm6Vs4UCeLs1zG3jHcI-57C86fnh0)
+  ![Demo3](https://drive.google.com/uc?export=view&id=1GLDxm6Vs4UCeLs1zG3jHcI-57C86fnh0)
   
   You can check the source code here to know more about the application
   
