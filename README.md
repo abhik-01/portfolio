@@ -35,7 +35,7 @@ Loading speed at different locations:
   
   Check the source code here to know more about the model
   
-  https://github.com/abhik-01/Diego/blob/main/dog-vision.ipynb
+  https://github.com/abhik-01/Diego
   
 * ### Hacker News `Web Scraper`
 
@@ -46,7 +46,7 @@ Loading speed at different locations:
   
   To know more about the project & check the source code, you can click here
   
-  https://github.com/abhik-01/webscraper/blob/main/HN_Scraping.py
+  https://github.com/abhik-01/webscraper
   
 * ### Cars & Pedestrians tracker
 
@@ -68,5 +68,5 @@ Loading speed at different locations:
   
   You can check the source code here to know more about the application
   
-  https://github.com/abhik-01/Data-Visualizer/blob/main/soccer.ipynb
+  https://github.com/abhik-01/Data-Visualizer
   
