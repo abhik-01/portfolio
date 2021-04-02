@@ -64,9 +64,8 @@ Loading speed at different locations:
   It's a `Data Visualizer` build using various `Python` libraries. It can process any large
   dataset, clean that as required & then visualize every individual data point present in the dataset.
   
-  ![Demo3](https://drive.google.com/uc?export=view&id=1GLDxm6Vs4UCeLs1zG3jHcI-57C86fnh0)
+  ![Demo3](https://drive.google.com/uc?export=view&id=1DLrWuBsVMyU5Njm-Gt5gJfR4_32M7AF1)
   
   You can check the source code here to know more about the application
   
   https://github.com/abhik-01/Data-Visualizer
-  
