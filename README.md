@@ -20,7 +20,7 @@ Loading speed at different locations:
 
 * ### Diego
 
-  It's a `Deep Learning Neural Network` model capable of identifying a dog's breed.
+  It's a `Deep Learning Neural Network` model build using `Python` & `Tensorflow`, capable of identifying a dog's breed.
   The frontend of the model takes a dog's image as an input & follows the `REST Architecture`
   to send the input data to the model. The model then predicts the breed & returns the output result.
   As of now it can identify 120 dog breeds.
